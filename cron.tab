@@ -1,0 +1,5 @@
+
+#EMISJA
+0 3    * * *   liquidsoap	python3 /home/liquidsoap/rals.py 
+5 3    * * *   root    python3 /home/liquidsoap/utworzfolderaudycji.py
+10 3   * * *   root    service liquidsoap restart

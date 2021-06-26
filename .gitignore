@@ -1,0 +1,11 @@
+config.liq.test
+config.liq.prod
+config.liq
+
+ralocal.liq
+ratest.liq
+raprod.liq
+
+liquidsoap/client_secret.json
+liquidsoap/.credentials
+liquidsoap/*.swo
