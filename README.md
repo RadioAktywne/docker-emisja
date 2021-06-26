@@ -8,7 +8,7 @@ To repozytorium zawiera kod źródłowy systemu emisyjnego RA do implementacji w
 
 ```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=<cos> ```
 np.
-``<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=prod ```
+```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=prod ```
 
 4. Odpal kontener poprawnie mapując porty (szczególnie 8009) oraz katalog z bazą muzyczną (/srv/ra)
 
