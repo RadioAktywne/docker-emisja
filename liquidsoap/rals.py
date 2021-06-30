@@ -206,11 +206,11 @@ def cronzeslownika(cron, slownik, dzien):
             czas = str(mk+5) + " " + str(hk) + " * * " + dzienk
             job.setall(czas)
             #NAGRYWANIE NOWE
-            comm = "/home/liquidsoap/startrec.sh /srv/ra/audycje/" + slur + "/powtorka/ " + slur + ".ogg " + slur
+            comm = "/home/liquidsoap/startrec.sh /home/liquidsoap/tempfile/ " + slur + ".ogg " + slur
             job = cron.new(command = comm, comment = "Uruchomienie nagrywania")
             czas = str(mp) + " " + str(hp) + " * * " + dzien
             job.setall(czas)
-            comm = "/home/liquidsoap/stoprec.sh /srv/ra/audycje/" + slur + "/powtorka/ " + slur + ".ogg " + slur
+            comm = "/home/liquidsoap/stoprec.sh /home/liquidsoap/tempfile/ " + slur + ".ogg " + slur
             job = cron.new(command = comm, comment = "Wylaczenie nagrywania")
             czas = str(mk) + " " + str(hk) + " * * " + dzienk
             job.setall(czas)
