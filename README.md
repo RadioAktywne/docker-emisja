@@ -6,11 +6,11 @@ To repozytorium zawiera kod źródłowy systemu emisyjnego RA do implementacji w
 2. W nowym pliku wpisz hasło do źródeł icecast, IP i hasło do wyjścia serwera icecast hostującego program.
 3. Zbuilduj obraz (produkcję/test/cokolwiek) za pomocą komendy
 
-```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=<cos> ```
+```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=<cos> . ```
 
 np.
 
-```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=prod ```
+```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=prod . ```
 
 4. Odpal kontener poprawnie mapując porty (szczególnie 8009) oraz katalog z bazą muzyczną (/srv/ra)
 
