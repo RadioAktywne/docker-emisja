@@ -4,7 +4,9 @@ To repozytorium zawiera kod źródłowy systemu emisyjnego RA do implementacji w
 ## Instalacja
 1. Zduplikuj plik config.liq.example. Nowy plik nazwij `config.liq.<cos>` np `config.liq.prod`.
 2. W nowym pliku wpisz hasło do źródeł icecast, IP i hasło do wyjścia serwera icecast hostującego program.
-3. Zbuilduj obraz (produkcję/test/cokolwiek) za pomocą komendy
+3. W Dockerfile ustaw prawidłowy UID i GID zgodny z userem liquidsoap na hoście (UWAGA jeśli nie ma takiego usera to trzeba go stworzyć)
+4. Należy przekopiować pliki autoryzacyjne do Google API (client_secret.json i katalog .credentials). Ewentualnie zautoryzować go ręcznie.
+5. Zbuilduj obraz (produkcję/test/cokolwiek) za pomocą komendy
 
 ```<sudo> docker build -t raktywne/emisja:2.0 --build-arg conf=<cos> . ```
 
